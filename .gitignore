@@ -1,0 +1,21 @@
+# ignore directories with symfony generated files
+cache/*
+log/*
+
+lib/*/doctrine/base
+lib/*/doctrine/*/base
+
+data/sql/*
+
+# ignore configuration files with sensitive data
+config/databases.yml
+config/app.yml
+
+# ignore 3rd party libraries
+lib/vendor/*/*
+
+# ignore 3rd party plugins
+plugins/*/*
+
+# ignore OS generated files
+.DS_Store

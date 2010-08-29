@@ -1,0 +1,29 @@
+Cluster:
+    connection: server_directory
+    actAs: { Timestampable: ~ }
+    columns:
+        name: string(100)
+        online: boolean
+        primary_id: integer
+        version: integer
+    relations:
+        Process:
+            local: primary_id
+        
+Process:
+    connection: server_directory
+    actAs: { Timestampable: ~ }
+    columns:
+        cluster_id: integer
+        process_type:
+            type: enum
+            values: [watchdog, login, connection]
+        address: integer
+        tcp_port: integer
+        udp_port: integer
+        status: integer
+    relations:
+        Cluster:
+            onDelete: CASCADE
+            foreignAlias: Processes
+        
