@@ -23,8 +23,10 @@ h1,h2,h3,h4,h5,h6{font-family:'Droid Sans Bold', arial, serif;}
 #content table th{padding:0.5em 0.3em;font-weight:normal;font-size:14px;background-color:#eaeaea;color:#666;}
 #content table tbody{background:#f8f8f8;}
 #content table td{padding:0.5em 0.3em;color:#484848;border-top:1px solid #e1e1e1;}
+#content table td>a{color:#4183C4;text-decoration:none;}
+#content table td>a:hover{text-decoration:underline;}
 
-.minibutton{display:inline-block;height:23px;padding:0 0 0 3px;font-size:11px;font-weight:bold;color:#333;text-shadow:1px 1px 0 #fff;text-decoration:none;background:url(../images/page/minibutton_matrix.png) 0 0 no-repeat;white-space:nowrap;border:none;overflow:visible;cursor:pointer;}
+.minibutton{display:inline-block;height:23px;padding:0 0 0 3px;font-size:11px;font-weight:bold;color:#333!important;text-shadow:1px 1px 0 #fff;text-decoration:none;background:url(../images/page/minibutton_matrix.png) 0 0 no-repeat;white-space:nowrap;border:none;overflow:visible;cursor:pointer;}
 input[type=text]+.minibutton{margin-left:5px;}
 button.minibutton::-moz-focus-inner{margin:-1px -3px;}
 .minibutton.danger{color:#900;}
