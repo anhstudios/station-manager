@@ -1,9 +1,8 @@
-<h1>Clusters List</h1>
+<h1>Cluster List</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Id</th>
       <th>Name</th>
       <th>Online</th>
       <th>Primary</th>
@@ -22,8 +21,7 @@
   <tbody>
     <?php foreach ($clusters as $cluster): ?>
     <tr>
-      <td><a href="<?php echo url_for('cluster/show?id='.$cluster->getId()) ?>"><?php echo $cluster->getId() ?></a></td>
-      <td><?php echo $cluster->getName() ?></td>
+      <td><a href="<?php echo url_for('cluster/show?id='.$cluster->getId()) ?>"><?php echo $cluster->getName() ?></a></td>
       <td><?php echo $cluster->getOnline() ?></td>
       <td><?php echo $cluster->getPrimaryId() ?></td>
       <td><?php echo $cluster->getVersion() ?></td>
