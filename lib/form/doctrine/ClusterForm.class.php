@@ -12,5 +12,6 @@ class ClusterForm extends BaseClusterForm
 {
   public function configure()
   {
+    unset($this['created_at'], $this['updated_at']);
   }
 }
