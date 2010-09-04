@@ -12,6 +12,13 @@
       <th>Updated at</th>
     </tr>
   </thead>
+  <tfoot>
+    <tr>
+      <td colspan="7">
+        <a href="<?php echo url_for('cluster/new') ?>" class="minibutton"><span>New Cluster</span></a>
+      </td>
+    </tr>
+  </tfoot>
   <tbody>
     <?php foreach ($clusters as $cluster): ?>
     <tr>
@@ -26,5 +33,3 @@
     <?php endforeach; ?>
   </tbody>
 </table>
-
-  <a href="<?php echo url_for('cluster/new') ?>">New</a>
