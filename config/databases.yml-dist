@@ -1,0 +1,7 @@
+all:
+  server_directory:
+    class: sfDoctrineDatabase
+    param:
+      dsn: 'mysql:host=localhost;dbname=station'
+      username: 
+      password: 
