@@ -1,0 +1,45 @@
+/* reset html defaults */
+*{margin:0;padding:0;}
+html,body{height:100%;color:black;}
+body{padding:0px;background-color:white;font-family:'Droid Sans', serif;font-size:12px;font-style:normal;font-weight:400;letter-spacing:0.074em;word-spacing:0.045em;line-height:1.1em;*font-size:small;}
+table{font-size:inherit;font:100%;}
+select,input[type=text],input[type=password],input[type=image],textarea{font:99% helvetica,arial,freesans,sans-serif;}
+select,option{padding:0 .25em;}
+optgroup{margin-top:.5em;}
+input.text{padding:1px 0;}
+pre,code{font:12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;}
+body *{line-height:1.4em;}
+p{margin:1em 0;}
+img{border:0;}
+ul{margin:0;padding:0;}
+td,th{border:0;}
+th{font-size:14px;font-weight:normal;}
+ol,ul,ul li{list-style:none;}
+html{overflow-y:scroll;}
+h1,h2,h3,h4,h5,h6{font-family:'Droid Sans Bold', arial, serif;}
+.site-section{margin:0 auto;width:920px;padding:0 15px;}
+
+.minibutton{display:inline-block;height:23px;padding:0 0 0 3px;font-size:11px;font-weight:bold;color:#333;text-shadow:1px 1px 0 #fff;background:url(../images/page/minibutton_matrix.png) 0 0 no-repeat;white-space:nowrap;border:none;overflow:visible;cursor:pointer;}
+input[type=text]+.minibutton{margin-left:5px;}
+button.minibutton::-moz-focus-inner{margin:-1px -3px;}
+.minibutton.danger{color:#900;}
+.minibutton>span{display:block;height:23px;padding:0 10px 0 8px;line-height:23px;background:url(../images/page/minibutton_matrix.png) 100% 0 no-repeat;}
+.minibutton:hover{color:#fff;text-decoration:none;text-shadow:-1px -1px 0 rgba(0,0,0,0.3);background-position:0 -30px;}
+.minibutton.danger:hover{background-position:0 -90px;}
+.minibutton:hover>span{background-position:100% -30px;}
+.minibutton.danger:hover>span{background-position:100% -90px;}
+.minibutton.mousedown{background-position:0 -60px;}
+.minibutton.danger.mousedown{background-position:0 -120px;}
+.minibutton.mousedown>span{background-position:100% -60px;}
+.minibutton.danger.mousedown>span{background-position:100% -120px;}
+
+#main{min-height:100%;background-color:white;height:auto!important;height:100%;margin:0 auto -5.4em;}
+
+#header{background:url(../images/page/page-bg.png) 0 100% repeat-x;}
+#logo{height:100px;}
+#logo h1{padding-top:30px;float:left;font-size:42px;font-family:'Josefin Sans Std Light', arial, serif;}
+#logo h1 a{color:#a3a3a3;text-decoration:none;}
+#logo h1 a:hover{color:#000;}
+
+#footer{height: 5.4em;background:#e6e6e6;overflow:hidden;min-width:75em;}
+#footer-content{border-top:1px solid #c9c9c9;padding:5px 0 0;}
