@@ -5,7 +5,6 @@ Cluster:
         name: string(100)
         online: boolean
         primary_id: integer
-        version: integer
     relations:
         Process:
             local: primary_id
@@ -21,6 +20,7 @@ Process:
         address: integer
         tcp_port: integer
         udp_port: integer
+        version: integer
         status: integer
     relations:
         Cluster:
