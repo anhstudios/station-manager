@@ -4,9 +4,8 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Online</th>
+      <th>Status</th>
       <th>Primary</th>
-      <th>Version</th>
       <th>Created at</th>
       <th>Updated at</th>
     </tr>
@@ -22,9 +21,8 @@
     <?php foreach ($clusters as $cluster): ?>
     <tr>
       <td><a href="<?php echo url_for('cluster/show?id='.$cluster->getId()) ?>"><?php echo $cluster->getName() ?></a></td>
-      <td><?php echo $cluster->getOnline() ?></td>
+      <td><?php echo $cluster->getStatus() ?></td>
       <td><?php echo $cluster->getPrimaryId() ?></td>
-      <td><?php echo $cluster->getVersion() ?></td>
       <td><?php echo $cluster->getCreatedAt() ?></td>
       <td><?php echo $cluster->getUpdatedAt() ?></td>
     </tr>

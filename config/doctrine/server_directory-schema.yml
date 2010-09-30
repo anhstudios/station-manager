@@ -2,11 +2,12 @@ Cluster:
     connection: server_directory
     actAs: { Timestampable: ~ }
     columns:
-        name: string(100)
-        online: boolean
         primary_id: integer
+        name: string(100)
+        status: integer
     relations:
         Process:
+            onDelete: SET NULL
             local: primary_id
         
 Process:
@@ -14,14 +15,17 @@ Process:
     actAs: { Timestampable: ~ }
     columns:
         cluster_id: integer
-        process_type:
+        type:
             type: enum
-            values: [watchdog, login, connection]
+            values: [watchdog, login, connection]        
+        version: string(255)
         address: integer
         tcp_port: integer
         udp_port: integer
-        version: integer
         status: integer
+        last_pulse: 
+            type: decimal(17)
+            scale: 3
     relations:
         Cluster:
             onDelete: CASCADE

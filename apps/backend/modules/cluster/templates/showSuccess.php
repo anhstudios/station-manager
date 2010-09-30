@@ -9,8 +9,8 @@
       <td><?php echo $cluster->getName() ?></td>
     </tr>
     <tr>
-      <th>Online:</th>
-      <td><?php echo $cluster->getOnline() ?></td>
+      <th>Status:</th>
+      <td><?php echo $cluster->getStatus() ?></td>
     </tr>
     <tr>
       <th>Primary:</th>

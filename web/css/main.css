@@ -19,12 +19,13 @@ h1,h2,h3,h4,h5,h6{font-family:'Droid Sans Bold', arial, serif;}
 
 .site-section{margin:0 auto;width:920px;padding:0 15px;}
 
-#content table{width:100%;text-align:left;border-collapse:collapse;border:1px solid #d8d8d8;}
-#content table th{padding:0.5em 0.3em;font-weight:normal;font-size:14px;background-color:#eaeaea;color:#666;}
-#content table tbody{background:#f8f8f8;}
-#content table td{padding:0.5em 0.3em;color:#484848;border-top:1px solid #e1e1e1;}
-#content table td>a{color:#4183C4;text-decoration:none;}
-#content table td>a:hover{text-decoration:underline;}
+table{width:100%;text-align:left;border-collapse:collapse;border:1px solid #d8d8d8;}
+table th:last-child,table td:last-child{border-right:1px solid #d8d8d8;}
+table th{padding:0.5em 0.3em;font-weight:normal;font-size:14px;background-color:#eaeaea;color:#666;}
+table tbody{background:#f8f8f8;}
+table td{padding:0.5em 0.3em;color:#484848;border-top:1px solid #e1e1e1;}
+table td>a{color:#4183C4;text-decoration:none;}
+table td>a:hover{text-decoration:underline;}
 
 .minibutton{display:inline-block;height:23px;padding:0 0 0 3px;font-size:11px;font-weight:bold;color:#333!important;text-shadow:1px 1px 0 #fff;text-decoration:none;background:url(../images/page/minibutton_matrix.png) 0 0 no-repeat;white-space:nowrap;border:none;overflow:visible;cursor:pointer;}
 input[type=text]+.minibutton{margin-left:5px;}
