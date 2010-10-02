@@ -9,6 +9,14 @@
     <?php include_javascripts() ?>
   </head>
   <body>
+    Hello, <?php if($sf_user->isAuthenticated()): ?><?php echo $sf_user->getUsername() ?><?php else: ?>Guest<?php endif; ?>!
+      
+    <?php if(!$sf_user->isAuthenticated()): ?>
+      <?php echo link_to('Register', 'sf_guard_register') ?> or <?php echo link_to('Sign in', 'sf_guard_signin') ?>      
+    <?php else: ?>
+      <?php echo link_to('Sign out', 'sf_guard_signout') ?>
+    <?php endif; ?>
+    
     <?php echo $sf_content ?>
   </body>
 </html>
