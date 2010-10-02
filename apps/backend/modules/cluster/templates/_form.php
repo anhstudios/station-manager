@@ -28,10 +28,10 @@
         </td>
       </tr>
       <tr>
-        <th><?php echo $form['online']->renderLabel() ?></th>
+        <th><?php echo $form['status']->renderLabel() ?></th>
         <td>
-          <?php echo $form['online']->renderError() ?>
-          <?php echo $form['online'] ?>
+          <?php echo $form['status']->renderError() ?>
+          <?php echo $form['status'] ?>
         </td>
       </tr>
       <tr>
@@ -39,13 +39,6 @@
         <td>
           <?php echo $form['primary_id']->renderError() ?>
           <?php echo $form['primary_id'] ?>
-        </td>
-      </tr>
-      <tr>
-        <th><?php echo $form['version']->renderLabel() ?></th>
-        <td>
-          <?php echo $form['version']->renderError() ?>
-          <?php echo $form['version'] ?>
         </td>
       </tr>
     </tbody>

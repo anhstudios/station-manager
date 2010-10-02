@@ -1,11 +1,30 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
+
+
 generate_auth_token:
   url: /user/generate_token.:sf_format
-  param: { module: user, action: generateAuthToken, sf_format: html }
+  param: { module: user, action: generateAuthToken, sf_format: json }
   requirements:
-      sf_format: (?:html|xml|json|yaml)
+    sf_format: (?:xml|json|yaml)
+      
+cluster_list:
+  url: /cluster/list.:sf_format
+  class: sfDoctrineRoute
+  options: { model: Cluster, type: list }
+  param: { module: cluster, action: list, sf_format: json }
+  requirements:
+    sf_format: (?:xml|json|yaml)
+
+cluster_show:
+  url: /cluster/show/:id.:sf_format
+  class: sfDoctrineRoute
+  options: { model: Cluster, type: object }
+  param: { module: cluster, action: show, sf_format: json }
+  requirements:
+    sf_format: (?:xml|json|yaml)
+
 # default rules
 homepage:
   url:   /
