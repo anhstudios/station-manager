@@ -1,6 +1,11 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
+generate_auth_token:
+  url: /user/generate_token.:sf_format
+  param: { module: user, action: generateAuthToken, sf_format: html }
+  requirements:
+      sf_format: (?:html|xml|json|yaml)
 # default rules
 homepage:
   url:   /

@@ -1,0 +1,10 @@
+AuthToken:
+  actAs: { Timestampable: ~ }
+  columns:
+    sf_guard_user_id: integer
+    remote_address: integer
+    remote_port: integer
+    token: string(255)    
+  relations:
+    User:
+      class: sfGuardUser
