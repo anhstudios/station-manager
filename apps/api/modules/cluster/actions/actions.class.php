@@ -14,11 +14,27 @@ class clusterActions extends sfActions
   {
     $this->clusters = $this->getRoute()->getObjects();
     $this->forward404Unless($this->clusters);
+    
+    switch ($request->getRequestFormat())
+    {
+      case 'yaml':
+        $this->setLayout(false);
+        $this->getResponse()->setContentType('text/yaml');
+        break;
+    }
   }
   
   public function executeShow(sfWebRequest $request)
   {
     $this->cluster = $this->getRoute()->getObject();
     $this->forward404Unless($this->cluster);
+    
+    switch ($request->getRequestFormat())
+    {
+      case 'yaml':
+        $this->setLayout(false);
+        $this->getResponse()->setContentType('text/yaml');
+        break;
+    }
   }
 }
