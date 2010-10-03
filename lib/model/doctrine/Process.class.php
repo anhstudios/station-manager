@@ -12,4 +12,18 @@
  */
 class Process extends BaseProcess
 {
+  /**
+  * This overload converts the last pulse into a human readable format.
+  */
+  public function getLastPulse() {
+    $ptime = strptime($this->_get('last_pulse'), "%Y%m%d%H%M%S"); 
+    
+    return strftime('%A, %d %B %Y %T'.$ptime['unparsed'].' %Z', 
+      mktime($ptime['tm_hour'], 
+             $ptime['tm_min'], 
+             $ptime['tm_sec'], 
+             $ptime['tm_mon']+1, 
+             $ptime['tm_mday'], 
+             $ptime['tm_year'] + 1900));
+  }
 }
